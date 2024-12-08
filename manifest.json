@@ -1,0 +1,9 @@
+{
+    "name": "PWA Sederhana",
+    "short_name": "PAW",
+    "description": "Contoh aplikasi PWA sederhana yang dapat diakses secara offline.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+}

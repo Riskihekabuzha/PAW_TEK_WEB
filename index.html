@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contoh aplikasi PWA sederhana">
+    <title>PAW - PWA Sederhana</title>
+    
+    <!-- Manifest untuk PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat datang di PWA Sederhana!</h1>
+    <div class="content">
+        <p>Aplikasi ini dapat diakses secara offline setelah diinstal.</p>
+    </div>
+
+    <script>
+        // Pendaftaran Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker terdaftar dengan sukses:', registration);
+                })
+                .catch(function(error) {
+                    console.log('Pendaftaran Service Worker gagal:', error);
+                });
+        }
+    </script>
+</body>
+</html>
